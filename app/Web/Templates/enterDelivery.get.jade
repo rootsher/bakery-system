@@ -1,0 +1,25 @@
+extends ./_layout.jade
+
+block content
+	h1 enterDelivery.get
+
+	form(action="/delivery/enter", method="post")
+		| Delivery date: 
+		input(type="date", name="deliveryDate")
+		br
+		| Supplier: 
+		select(name="supplierID", class="supplierList")
+			option(value="0") Select option
+			each supplier in supplierList
+				option(value="#{supplier._id}") #{supplier.name}
+		br
+
+		| Product: 
+		select(name="productID", class="productList")
+		br
+
+		| Input quantity: 
+		input(type="number", name="inputQuantity", value="", placeholder="", class="inputQuantity")
+		br
+
+		input(type="submit", name="submit", value="Enter delivery")

@@ -1,0 +1,14 @@
+extends ./_layout.jade
+
+block content
+	h1 supplierList.get
+
+	table(border="1")
+		tr
+			th Name
+			th Show
+		each supplier in supplierList
+			tr
+				td #{supplier.name}
+				td
+					a(href="/supplier/show/#{supplier._id}") Show

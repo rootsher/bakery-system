@@ -1,0 +1,16 @@
+extends ./_layout.jade
+
+block content
+	h1 summary.get
+
+	form(action="", method="post")
+		| from: 
+		input(type="date", name="dateFrom")
+		|  to: 
+		input(type="date", name="dateTo")
+		|  supplier: 
+		select(name="supplierID")
+			each supplier in supplierList
+				option(value="#{supplier._id}") #{supplier.name}
+
+		input(type="submit", value="Show me", name="deliverySorting")

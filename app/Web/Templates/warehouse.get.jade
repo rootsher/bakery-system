@@ -1,0 +1,16 @@
+extends ./_layout.jade
+
+block content
+	h1 warehouse.get
+
+	table(border="1")
+		tr
+			th Supplier
+			th Product
+			th Quantity
+		tr
+			td
+				a(href="/supplier/show/1") Example supplier
+			td
+				a(href="/product/show/1") Example product
+			td 5

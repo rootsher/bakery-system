@@ -1,0 +1,22 @@
+extends ./_layout.jade
+
+block content
+	h1 deliveryList.get
+
+	table(border="1")
+		tr
+			th Delivery date
+			th Supplier
+			th Product
+			th Input quantity
+			th Show
+		each delivery in deliveryList
+			tr
+				td #{delivery.deliveryDate}
+				td
+					a(href="/supplier/show/#{delivery.productData.supplierID}") {supplierName}
+				td
+					a(href="/product/show/#{delivery.productData._id}") {productName}
+				td #{delivery.inputQuantity}
+				td
+					a(href="/delivery/show/#{delivery._id}") Show

@@ -1,0 +1,72 @@
+[
+	{
+		"path": "/",
+		"name": "index",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/supplier/add",
+		"name": "addSupplier",
+		"methods": [ "get", "post" ]
+	},
+	{
+		"path": "/supplier/list",
+		"name": "supplierList",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/supplier/show/:id",
+		"name": "showSupplier",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/product/add",
+		"name": "addProduct",
+		"methods": [ "get", "post" ]
+	},
+	{
+		"path": "/product/list",
+		"name": "productList",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/product/show/:id",
+		"name": "showProduct",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/delivery/enter",
+		"name": "enterDelivery",
+		"methods": [ "get", "post" ]
+	},
+	{
+		"path": "/delivery/list",
+		"name": "deliveryList",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/delivery/show/:id",
+		"name": "showDelivery",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/warehouse",
+		"name": "warehouse",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/getProductList",
+		"name": "getProductList",
+		"methods": [ "get" ]
+	},
+	{
+		"path": "/returnsAndLosses",
+		"name": "returnsAndLosses",
+		"methods": [ "get", "post" ]
+	},
+	{
+		"path": "/summary",
+		"name": "summary",
+		"methods": [ "get", "post" ]
+	}
+]

@@ -1,0 +1,35 @@
+extends ./_layout.jade
+
+block content
+	h1 returnsAndLosses.post
+
+	form(action="", method="post")
+		| from: 
+		input(type="date", name="dateFrom")
+		|  to: 
+		input(type="date", name="dateTo")
+		|  supplier: 
+		select(name="supplierID")
+			each supplier in supplierList
+				option(value="#{supplier._id}") #{supplier.name}
+
+		input(type="submit", value="Show me", name="deliverySorting")
+
+	if deliveryList.length > 0
+		form(action="", method="post")
+			table(border="1")
+				tr
+					th SupplierID
+					th Product name
+					th Returns
+					th Losses
+				each delivery in deliveryList
+					tr
+						td #{delivery.productData.supplierID}
+						td #{delivery.productData.name}
+						td 
+							input(type="text", name="", value="", size="3")
+						td 
+							input(type="text", name="", value="", size="3")
+
+			input(type="submit", value="Apply changes", name="deliveryChanges")

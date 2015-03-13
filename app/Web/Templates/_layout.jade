@@ -1,0 +1,29 @@
+html
+	head
+		link(rel="stylesheet", href="/css/main.css")
+		script(src="/js/system.js")
+	body
+		nav.mainMenu
+			ul
+				li.common--group
+					a(href="/") index
+				li.supplier--group
+					a(href="/supplier/add") add supplier
+				li.supplier--group
+					a(href="/supplier/list") supplier list
+				li.product--group
+					a(href="/product/add") add product
+				li.product--group
+					a(href="/product/list") product list
+				li.delivery--group
+					a(href="/delivery/enter") enter delivery
+				li.delivery--group
+					a(href="/delivery/list") delivery list
+				li.warehouse--group
+					a(href="/returnsAndLosses") returns / losses
+				li.warehouse--group
+					a(href="/summary") summary
+				li.warehouse--group
+					a(href="/warehouse") warehouse
+		main
+			block content

@@ -1,0 +1,19 @@
+extends ./_layout.jade
+
+block content
+	h1 productList.get
+
+	table(border="1")
+		tr
+			th Supplier
+			th Name
+			th Units
+			th Show
+		each product in productList
+			tr
+				td
+					a(href="/supplier/show/#{product.supplierID}") #{product.supplierID}
+				td #{product.name}
+				td #{product.inputUnit} -> #{product.outputUnit}
+				td
+					a(href="/product/show/#{product._id}") Show
